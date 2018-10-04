@@ -1,0 +1,20 @@
+n	v	prn	adj	prep	adv	ij	post	conn
+plr	sing							
+fem	masc							
+prf	imfr							
+neg								
+tv	iv							
+caus								
+rel								
+intr								
+fut								
+opt								
+intrEnding								
+shortcnvb	longcnvb							
+simu								
+refl								
+nmlz								
+inf								
+honplr								
+noncon	con							
+nom	abs	obl	voc	
