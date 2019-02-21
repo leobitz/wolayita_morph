@@ -40,10 +40,10 @@ def get_rev_feat(max_len, index=-1):
     vec[index] = 1
     return vec
 def get_reverse_feature_array():
-    lines = open('data_shuffled.txt', encoding='utf-8').readlines()
+    lines = open('final.txt', encoding='utf-8').readlines()
     n_featval = sum([len(feat2val[k]) for k in feat2val])
     featArray = []
-    maxroot, maxword = 0, 0
+    maxroot, maxword = 15, 0
     words = []
     roots = []
     k = 0
@@ -67,8 +67,8 @@ def get_reverse_feature_array():
         k += 1
         if len(word) > maxword:
             maxword = len(word)
-        if len(root) > maxroot:
-            maxroot = len(root)
+        # if len(root) > maxroot:
+        #     maxroot = len(root)
         for char in word:
             if char not in char2int:
                 temp = len(char2int)
@@ -86,11 +86,11 @@ def get_reverse_feature_array():
     return roots, words, featArray, maxroot, maxword, n_features
 
 
-def get_feature_array():
-    lines = open('data_shuffled.txt', encoding='utf-8').readlines()
+def get_feature_array(data):
+    lines = open(data, encoding='utf-8').readlines()
     n_featval = sum([len(feat2val[k]) for k in feat2val])
     featArray = np.zeros((len(lines), n_featval), dtype=np.int32)
-    maxroot, maxword = 0, 0
+    maxroot, maxword = 15, 0
     words = []
     roots = []
     k = 0
@@ -106,8 +106,8 @@ def get_feature_array():
         k += 1
         if len(word) > maxword:
             maxword = len(word)
-        if len(root) > maxroot:
-            maxroot = len(root)
+        # if len(root) > maxroot:
+        #     maxroot = len(root)
         for char in word:
             if char not in char2int:
                 temp = len(char2int)
